@@ -1,0 +1,17 @@
+@media only screen and (max-width: 992px) {
+    aside{
+        left: -300px; /**/
+        animation: none; /*отмена анимации*/
+        z-index: 100;
+    }
+    main{
+        margin-left: 0;
+        animation: mailLeft 400ms;
+    }
+
+    .main-header{
+        display: block;
+    }
+
+}
+
