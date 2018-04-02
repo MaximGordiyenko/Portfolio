@@ -226,46 +226,114 @@ section.gallery .gallery-item p {
     color: white;
 }
 
-.about{
+.about {
+    display: flex;
+    flex-wrap: wrap;
     margin-left: 300px;
 }
 
-.about img{
+.about img {
     width: 48%;
     margin: 50px 0 40px 15px;
 }
 
-.about h4{
+.about h4 {
     font-size: 20px;
     margin: 15px;
 }
 
-.about p{
+.about p {
     margin: 5px 15px;
 }
-.skill{
+
+.skill {
+    display: flex;
+    flex-wrap: wrap;
     margin-left: 300px;
 }
-.skill h3{
+
+.skill h3 {
+    display: inline-block;
+    width: 100%;
+    margin: 15px;
     color: #585858;
 }
-.skill p{
+
+.skill p {
     padding: 15px;
     color: #585858;
 }
 
-.line{
+.line {
     width: 100%;
     height: 40px;
+    margin: 15px;
     background: #cdcdcd;
     position: relative;
     color: white;
 }
 
-.w95:before{
+.w95:before {
     content: "";
     display: inline-block;
     height: 100%;
     width: 95%;
     background: #585858;
+}
+
+.w95:after {
+    content: "95%";
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    /*top: 50%;*/
+}
+
+.w85:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 85%;
+    background: #585858;
+}
+
+.w85:after {
+    content: "85%";
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+}
+
+.w80:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 80%;
+    background: #585858;
+}
+
+.w80:after {
+    content: "80%";
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+}
+
+.downloads{
+    width: 250px;
+    height: 50px;
+    margin: 15px;
+    background: #666666;
+    color: white;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.fa-download{
+    font-size: 15px;
+    padding: 5px 20px 5px 10px;
+}
+
+.subscription{
+    margin-left: 300px;
 }
