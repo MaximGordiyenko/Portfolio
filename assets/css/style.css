@@ -319,7 +319,7 @@ section.gallery .gallery-item p {
     left: 50%;
 }
 
-.downloads{
+.downloads {
     width: 250px;
     height: 50px;
     margin: 15px;
@@ -329,11 +329,38 @@ section.gallery .gallery-item p {
     font-weight: normal;
 }
 
-.fa-download{
+.fa-download {
     font-size: 15px;
     padding: 5px 20px 5px 10px;
 }
 
-.subscription{
+.subscription {
     margin-left: 300px;
+}
+
+.subscription h4 {
+    color: #585858;
+    margin: 15px;
+}
+
+.subscription ul {
+    display: flex;
+    justify-content: space-between;
+    background: #f5f5f5;
+    margin: 20px 15px;
+}
+/*добавить разрыв между столбцами basic, pro premium*/
+/*убрать двойной бордер*/
+
+.subscription ul li {
+    list-style-type: none;
+    border: 1px solid #a3a3a3;
+}
+
+.subscription ul li:first-child ol li {
+    color: #14bab5;
+}
+
+.subscription ul > li:nth-child(3){
+    color: brown;
 }
