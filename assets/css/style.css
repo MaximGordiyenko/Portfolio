@@ -430,9 +430,6 @@ footer form {
     margin: 15px;
     border-top: 1px solid #ebebeb;
 }
-footer form label{
-    margin-top: 10px;
-}
 
 footer form label input {
     display: flex;
@@ -446,10 +443,89 @@ footer form button {
     background: #000;
     padding: 15px;
     font-size: 15px;
+    border: none;
 }
 
 footer form button i {
     padding-right: 10px;
 }
 
+/*FOOTER*/
+footer section {
+    background: #585858;
+    display: flex;
+}
 
+footer section div {
+    width: 33%;
+}
+
+footer section div h3 {
+    font-size: 30px;
+    color: #ebebeb;
+    text-transform: uppercase;
+}
+
+footer section div:first-child {
+    margin-left: 15px;
+}
+
+footer section div p {
+    margin: 0 15px 15px 0;
+    font-size: 20px; /*=fz*/
+    color: #ececec;
+}
+
+/*BLOG POSTS*/
+.blog {
+    display: flex;
+}
+
+div.blog:nth-of-type(1) {
+    border-bottom: 1px solid #ebebeb;
+}
+
+.blog img {
+    width: 50px;
+    height: 50px;
+    margin: 15px 15px 15px 30px;
+}
+
+.f-img {
+    width: 50px;
+}
+
+/*TAGS*/
+.tags div {
+    display: inline;
+    margin: 15px;
+}
+
+.tags span:nth-of-type(1) {
+    background: #000;
+    color: white;
+    padding: 5px;
+    margin: 10px 5px 5px 0;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.tags span:nth-of-type(1n+2) {
+    display: inline-block;
+    background: #b0b0b0;
+    padding: 5px;
+    margin: 10px 5px 5px 0;
+    font-size: 10px;
+}
+
+.tags span:nth-child(4) {
+    text-transform: uppercase;
+}
+
+.tags span:nth-child(5) {
+    text-transform: uppercase;
+}
+
+.tags span:nth-child(6) {
+    text-transform: uppercase;
+}
