@@ -359,11 +359,11 @@ div.line {
     opacity: 1;
 }
 
-.subscription div:nth-child(2){
+.subscription div:nth-child(2) {
     opacity: .5;
 }
 
-.subscription div:nth-child(2):hover{
+.subscription div:nth-child(2):hover {
     opacity: 1;
 }
 
@@ -431,7 +431,7 @@ footer {
 
 footer h3 {
     font-weight: normal;
-    padding: 30px 0 30px 15px;
+    margin: 35px 0 25px 0;
     color: #000000;
 }
 
@@ -530,9 +530,14 @@ footer section div:first-child {
 
 footer section div p {
     margin: 0 15px 20px 0;
-    font-size: 20px; /*=fz*/
+    font-size: 15px; /*=fz*/
     font-weight: normal;
     color: #ececec;
+}
+
+footer section div p a {
+    color: #ebebeb;
+    text-decoration: underline;
 }
 
 div.under-line {
@@ -543,41 +548,42 @@ div.under-line {
 }
 
 /*BLOG POSTS*/
-.blog h5 {
-    padding-top: 15px;
-    font-size: 20px;
-    font-weight: normal;
-    color: #ebebeb;
-}
-
-.blog h5, .blog p {
+.blog {
     display: flex;
 }
 
+.blog h5 {
+    display: inline;
+    font-size: 20px;
+    font-weight: normal;
+    color: #ebebeb;
+    width: 100px;
+    height: 10px;
+    margin: 0 30px 0 0;
+}
+
 .blog p {
+    display: inline;
+    width: 100px;
+    height: 20px;
     font-size: 12px;
 }
 
 .blog img {
-    width: 70px;
-    height: 70px;
-    margin: 15px 15px 15px 30px;
-    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 0 15px 15px 15px;
 }
 
 /*TAGS*/
 .tags div {
     display: inline;
-    margin: 15px;
 }
 
 .tags span:nth-of-type(1) {
     background: #000;
     color: white;
     padding: 5px;
-    margin: 10px 5px 5px 0;
-    font-size: 13px;
-    cursor: pointer;
 }
 
 .tags span:hover {
@@ -590,7 +596,7 @@ div.under-line {
     background: #b0b0b0;
     padding: 5px;
     margin: 10px 5px 5px 0;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .tags span:nth-child(4) {
@@ -616,9 +622,6 @@ div.under-line {
 
 .power-by a {
     text-decoration: underline;
-}
-
-.power-by a:visited {
     color: #ebebeb;
 }
 
