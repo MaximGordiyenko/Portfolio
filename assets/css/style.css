@@ -350,11 +350,11 @@ div.line {
     margin: 5px;
 }
 
-.subscription ul:first-child {
+.subscription div:first-child {
     margin-left: 20px;
 }
 
-.subscription ul:last-child {
+.subscription div:last-child {
     margin-right: 20px;
 }
 
@@ -373,7 +373,8 @@ div.line {
 }
 
 /*BASIC  PREMIUM*/
-.subscription ul:first-child li:first-child, .subscription ul:last-child li:first-child {
+.subscription div:first-child li:first-child,
+.subscription div:last-child li:first-child {
     background: #666666;
     color: #ebebeb;
     font-size: 25px;
@@ -382,7 +383,7 @@ div.line {
 }
 
 /*PRO*/
-.subscription ul:nth-last-child(2) li:first-child {
+.subscription div:nth-last-child(2) li:first-child {
     background: #62b5ad;
     color: #ebebeb;
     font-size: 25px;
