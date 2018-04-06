@@ -264,6 +264,16 @@ section.gallery .gallery-item p {
     color: #585858;
 }
 
+div.line {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 15px 0 15px;
+    background: #cdcdcd;
+    position: relative;
+    color: white;
+}
+
 .w95:before {
     content: "";
     display: inline-block;
@@ -277,7 +287,6 @@ section.gallery .gallery-item p {
     display: inline-block;
     position: absolute;
     left: 50%;
-    /*top: 50%;*/
 }
 
 .w85:before {
@@ -332,28 +341,72 @@ section.gallery .gallery-item p {
 }
 
 .subscription {
-display: flex;
-margin-left: 300px;
+    display: flex;
+    margin-left: 300px;
 }
 
-.subscription ul {
+.subscription div {
     width: 33%;
     margin: 5px;
 }
 
-.subscription ul li {
-    list-style-type: none;
-    border: 1px solid #a3a3a3;
-
+.subscription ul:first-child {
+    margin-left: 20px;
 }
 
-.subscription ul li ol li{
+.subscription ul:last-child {
+    margin-right: 20px;
+}
+
+.subscription ul li {
+    list-style-type: none;
+    border: 1px solid #dfdfdf;
+    border-top: none;
     text-align: center;
-    background: #e4e4e4;
+    background: #f7f7f7;
+    color: #b0b0b0;
     width: 100%;
-    margin: 0;
-    border-right: none;
-    border-left: none;
+}
+
+.subscription ul li:nth-child(1n-2) {
+    padding: 15px;
+}
+
+/*BASIC  PREMIUM*/
+.subscription ul:first-child li:first-child, .subscription ul:last-child li:first-child {
+    background: #666666;
+    color: #ebebeb;
+    font-size: 25px;
+    padding: 25px;
+    border: none;
+}
+
+/*PRO*/
+.subscription ul:nth-last-child(2) li:first-child {
+    background: #62b5ad;
+    color: #ebebeb;
+    font-size: 25px;
+    padding: 25px;
+}
+
+/*END li*/
+.subscription ul li:nth-of-type(7) {
+    background: #f0f0f0;
+    margin-bottom: 50px;
+}
+
+/* BUTTON*/
+.subscription ul li button {
+    margin: 20px;
+}
+
+.subscription ul li button {
+    font-size: 15px;
+    font-weight: lighter;
+    background: #62b5ad;
+    color: #ebebeb;
+    border: none;
+    padding: 10px;
 }
 
 footer {
@@ -468,17 +521,13 @@ footer section div p {
 }
 
 div.under-line {
-    width: 100%;
-    height: 30px;
-    line-height: 30px;
-    margin: 0 15px 0 15px;
+    width: 90%;
+    height: 1px;
+    margin: 0 10px 0 10px;
     background: #cdcdcd;
-    position: relative;
-    color: white;
 }
 
 /*BLOG POSTS*/
-
 .blog h5 {
     padding-top: 15px;
     font-size: 20px;
@@ -489,7 +538,8 @@ div.under-line {
 .blog h5, .blog p {
     display: flex;
 }
-.blog p{
+
+.blog p {
     font-size: 12px;
 }
 
@@ -499,7 +549,6 @@ div.under-line {
     margin: 15px 15px 15px 30px;
     float: left;
 }
-
 
 /*TAGS*/
 .tags div {
