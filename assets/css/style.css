@@ -160,7 +160,7 @@ main {
 
 section.gallery {
     display: flex;
-    flex-wrap: wrap; /*Ð¼Ð½Ð¾Ð³Ð¾ÑÑ‚Ñ€Ð¾Ñ‡Ð½Ð¾ÑÑ‚ÑŒ*/
+    flex-wrap: wrap;
     justify-content: space-between;
     border-top: 7px solid #c8c8c8;
     padding: 10px 0;
@@ -181,12 +181,13 @@ section.gallery .gallery-item img {
 
 section.gallery .gallery-item h4 {
     padding: 10px;
+    font-weight: bold;;
 }
 
 section.gallery .gallery-item p {
     line-height: 1.5em;
     margin: 10px;
-    /*padding: 2px 5px;*/
+    font-weight: normal;
 }
 
 .gallery-item div {
@@ -234,7 +235,8 @@ section.gallery .gallery-item p {
 
 .about img {
     width: 48%;
-    margin: 50px 0 40px 15px;
+    height: 320px;
+    margin: 50px 0 20px 15px;
 }
 
 .about h4 {
@@ -243,7 +245,8 @@ section.gallery .gallery-item p {
 }
 
 .about p {
-    margin: 5px 15px;
+    margin: 0 15px;
+    line-height: 1.5em;
 }
 
 .skill {
@@ -255,8 +258,11 @@ section.gallery .gallery-item p {
 .skill h3 {
     display: inline-block;
     width: 100%;
-    margin: 15px;
+    margin: 30px 0 0 15px;
     color: #585858;
+    font-weight: normal;
+    font-size: 25px;
+
 }
 
 .skill p {
@@ -269,7 +275,7 @@ div.line {
     height: 30px;
     line-height: 30px;
     margin: 0 15px 0 15px;
-    background: #cdcdcd;
+    background: #b6b6b6;
     position: relative;
     color: white;
 }
@@ -287,6 +293,7 @@ div.line {
     display: inline-block;
     position: absolute;
     left: 50%;
+    padding-left: 7%;
 }
 
 .w85:before {
@@ -302,6 +309,7 @@ div.line {
     display: inline-block;
     position: absolute;
     left: 50%;
+    padding-left: 3%;
 }
 
 .w80:before {
@@ -322,7 +330,7 @@ div.line {
 .downloads {
     width: 250px;
     height: 50px;
-    margin: 15px;
+    margin: 30px 0 20px 15px;
     background: #666666;
     color: white;
     font-size: 15px;
@@ -337,7 +345,8 @@ div.line {
 /*SUBSCRIPTION*/
 .above-li {
     color: #585858;
-    margin: 25px 5px 0 315px;
+    margin: 25px 5px 10px 325px;
+    font-size: 20px;
 }
 
 .subscription {
@@ -424,6 +433,11 @@ div.line {
     padding: 10px;
 }
 
+.subscription ul li button:hover {
+    background: #000;
+    color: #f9f9f9;
+}
+
 footer {
     margin: 50px 0 0 300px;
     background: #a3a3a3;
@@ -431,8 +445,9 @@ footer {
 
 footer h3 {
     font-weight: normal;
-    margin: 35px 0 25px 0;
+    padding: 20px 0 25px 15px;
     color: #000000;
+    font-size: 20px;
 }
 
 footer ul {
@@ -483,10 +498,13 @@ footer ul li p {
 footer ul li p {
     text-align: center;
 }
-
+/*FORM*/
 footer form {
     margin: 15px;
-    border-top: 1px solid #ebebeb;
+    border-top: 2px solid #bfbbbb;
+}
+footer form div{
+    margin-top: 20px;
 }
 
 footer form label input {
@@ -522,17 +540,22 @@ footer section div h3 {
     font-size: 30px;
     color: #ebebeb;
     text-transform: uppercase;
+    margin: 35px 0 25px 0;
 }
 
 footer section div:first-child {
     margin-left: 15px;
 }
 
-footer section div p {
+footer section div:first-child p:first-of-type {
     margin: 0 15px 20px 0;
-    font-size: 15px; /*=fz*/
-    font-weight: normal;
+}
+
+footer section div p {
+    font-size: 15px;
+    font-weight: lighter;
     color: #ececec;
+    line-height: 1.5em;
 }
 
 footer section div p a {
@@ -548,31 +571,33 @@ div.under-line {
 }
 
 /*BLOG POSTS*/
-.blog {
-    display: flex;
+.blog div {
+    height: 70px;
 }
 
-.blog h5 {
-    display: inline;
-    font-size: 20px;
-    font-weight: normal;
-    color: #ebebeb;
-    width: 100px;
-    height: 10px;
-    margin: 0 30px 0 0;
+.blog div:nth-of-type(1) {
+    border-bottom: 1px solid #ebebeb;
+    width: 90%;
+    margin: 0 0 20px 0;
 }
 
-.blog p {
-    display: inline;
-    width: 100px;
-    height: 20px;
-    font-size: 12px;
+.blog div:nth-of-type(2) {
+    width: 90%;
+    margin-bottom: 30px;
 }
 
 .blog img {
-    width: 60px;
-    height: 60px;
-    margin: 0 15px 15px 15px;
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
+    float: left;
+}
+
+.blog h5 {
+    font-size: 18px;
+    font-weight: lighter;
+    color: #ebebeb;
+    padding-bottom: 5px;
 }
 
 /*TAGS*/
@@ -596,7 +621,7 @@ div.under-line {
     background: #b0b0b0;
     padding: 5px;
     margin: 10px 5px 5px 0;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .tags span:nth-child(4) {
@@ -617,7 +642,7 @@ div.under-line {
     background: #000;
     color: #ebebeb;
     text-align: center;
-    padding: 50px 0;
+    padding: 30px 0;
 }
 
 .power-by a {
