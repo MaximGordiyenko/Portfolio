@@ -2,6 +2,6 @@ function showAside() {
     document.querySelector("aside").style.left = "0";
 }
 
-function hudeAside() {
+function hideAside() {
     document.querySelector("aside").style.left = "-300px";
 }

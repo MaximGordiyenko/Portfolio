@@ -1,15 +1,23 @@
 @media only screen and (max-width: 992px) {
-    aside{
+    aside {
         left: -300px; /**/
         animation: none; /*отмена анимации*/
         z-index: 100;
     }
-    main{
+
+    .fa-times{
+        display: block;
+    }
+
+    main {
         margin-left: 0;
         animation: mailLeft 400ms;
     }
+    footer{
+        margin-left: 0;
+    }
 
-    .main-header{
+    .main-header {
         display: block;
     }
 

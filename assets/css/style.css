@@ -19,6 +19,26 @@ aside {
     animation: slideLeft 400ms;
 }
 
+.fa-times {
+    display: none;
+}
+
+aside button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    padding: 15px;
+    cursor: pointer;
+
+}
+
+aside button i {
+    font-size: 2.5em;
+}
+
 aside .avatar {
     width: 120px;
     height: 120px;
@@ -63,22 +83,6 @@ aside ul li a i {
     margin: 0 15px;
 }
 
-aside button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: 0;
-    outline: 0;
-    background-color: transparent;
-    padding: 15px;
-    cursor: pointer;
-
-}
-
-aside button i {
-    font-size: 2.5em;
-}
-
 .social {
     margin: 10px 12px;
 }
@@ -96,6 +100,10 @@ main {
     padding: 25px 15px;
     animation: none;
     position: relative;
+}
+
+main h1 {
+    font-weight: normal;
 }
 
 .main-header {
@@ -121,6 +129,18 @@ main {
 
 .main-header button i {
     font-size: 3em;
+}
+
+.circle-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    float: right;
+}
+
+.circle-avatar:hover {
+    opacity: .5;
+    cursor: pointer;
 }
 
 .filter {
@@ -174,7 +194,7 @@ section.gallery .gallery-item {
 }
 
 section.gallery .gallery-item img {
-    width: 100%; /*Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ñ€ÐµÑÐ°Ð¾Ð½ÑÐ¸Ð²Ð½Ð¾ÑÑ‚ÑŒ*/
+    width: 100%;
     height: auto;
 
 }
@@ -208,7 +228,6 @@ section.gallery .gallery-item p {
 .pagination {
     display: flex;
     justify-content: center;
-    margin-left: 300px;
 }
 
 .pagination a {
@@ -230,35 +249,42 @@ section.gallery .gallery-item p {
 .about {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 300px;
 }
 
 .about img {
-    width: 48%;
+    width: 50%;
     height: 320px;
-    margin: 50px 0 20px 15px;
+    margin: 50px 0 20px 0;
+}
+
+.about img:nth-of-type(1) {
+    padding-right: 10px;
+}
+
+.about img:nth-of-type(2) {
+    padding-left: 10px;
 }
 
 .about h4 {
     font-size: 20px;
-    margin: 15px;
+    font-weight: normal;
+    margin: 15px 15px 15px 0;
 }
 
 .about p {
-    margin: 0 15px;
+    font-weight: lighter;
     line-height: 1.5em;
 }
 
 .skill {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 300px;
 }
 
 .skill h3 {
     display: inline-block;
     width: 100%;
-    margin: 30px 0 0 15px;
+    margin-top: 30px;
     color: #585858;
     font-weight: normal;
     font-size: 25px;
@@ -266,7 +292,7 @@ section.gallery .gallery-item p {
 }
 
 .skill p {
-    padding: 15px;
+    margin: 15px 0;
     color: #585858;
 }
 
@@ -274,7 +300,6 @@ div.line {
     width: 100%;
     height: 30px;
     line-height: 30px;
-    margin: 0 15px 0 15px;
     background: #b6b6b6;
     position: relative;
     color: white;
@@ -330,7 +355,7 @@ div.line {
 .downloads {
     width: 250px;
     height: 50px;
-    margin: 30px 0 20px 15px;
+    margin: 30px 0 20px 0;
     background: #666666;
     color: white;
     font-size: 15px;
@@ -345,23 +370,21 @@ div.line {
 /*SUBSCRIPTION*/
 .above-li {
     color: #585858;
-    margin: 25px 5px 10px 325px;
+    margin: 25px 5px 10px 0;
     font-size: 20px;
 }
 
 .subscription {
     display: flex;
-    margin-left: 300px;
 }
 
 .subscription div {
     width: 33%;
-    margin: 5px;
 }
 
 .subscription div:first-child {
-    margin-left: 25px;
     opacity: .5;
+    margin-right: 5px;
 }
 
 .subscription div:first-child:hover {
@@ -370,6 +393,7 @@ div.line {
 
 .subscription div:nth-child(2) {
     opacity: .5;
+    margin: 0 10px;
 }
 
 .subscription div:nth-child(2):hover {
@@ -377,8 +401,8 @@ div.line {
 }
 
 .subscription div:last-child {
-    margin-right: 25px;
     opacity: .5;
+    margin-left: 5px;
 }
 
 .subscription div:last-child:hover {
@@ -498,12 +522,14 @@ footer ul li p {
 footer ul li p {
     text-align: center;
 }
+
 /*FORM*/
 footer form {
     margin: 15px;
     border-top: 2px solid #bfbbbb;
 }
-footer form div{
+
+footer form div {
     margin-top: 20px;
 }
 
@@ -520,6 +546,12 @@ footer form button {
     padding: 15px;
     font-size: 15px;
     border: none;
+    cursor: pointer; /*appear hand-cursor*/
+}
+
+footer form button:hover {
+    background: #dfdfdf;
+    color: black;
 }
 
 footer form button i {
@@ -605,15 +637,19 @@ div.under-line {
     display: inline;
 }
 
-.tags span:nth-of-type(1) {
+.tags span a:nth-of-type(1) {
     background: #000;
     color: white;
     padding: 5px;
+    cursor: pointer;
+    font-weight: lighter;
 }
 
-.tags span:hover {
-    background: #ebebeb;
+.tags span a:hover {
+    background: #d8d8d8;
     color: black;
+    font-weight: normal;
+    cursor: pointer;
 }
 
 .tags span:nth-of-type(1n+2) {
@@ -639,10 +675,11 @@ div.under-line {
 /*W3.CSS*/
 .power-by {
     font-size: 20px;
+    font-weight: lighter;
     background: #000;
     color: #ebebeb;
     text-align: center;
-    padding: 30px 0;
+    padding: 25px 0;
 }
 
 .power-by a {
